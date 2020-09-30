@@ -1,0 +1,200 @@
+GPU Device 0: "Tesla V100-PCIE-32GB" with compute capability 7.0
+
+
+----------------------------------------------------
+Test case: (n,m,l)=(8,256,2048)
+GPU Time: 0.254 msec
+GPU Performance: 268.86 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        7.1639E+04
+L2 Norm of CPU covariance matrix:        7.1639E+04
+L2 Norm of covariance matrix difference: 5.2524E-03
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(16,256,2048)
+GPU Time: 0.855 msec
+GPU Performance: 161.81 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        1.2645E+05
+L2 Norm of CPU covariance matrix:        1.2645E+05
+L2 Norm of covariance matrix difference: 1.4652E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(8,512,2048)
+GPU Time: 0.496 msec
+GPU Performance: 272.80 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        1.4305E+05
+L2 Norm of CPU covariance matrix:        1.4305E+05
+L2 Norm of covariance matrix difference: 1.7003E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(16,512,2048)
+GPU Time: 1.723 msec
+GPU Performance: 158.25 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        2.5248E+05
+L2 Norm of CPU covariance matrix:        2.5248E+05
+L2 Norm of covariance matrix difference: 4.1540E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(8,768,2048)
+GPU Time: 0.697 msec
+GPU Performance: 290.21 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        2.1448E+05
+L2 Norm of CPU covariance matrix:        2.1448E+05
+L2 Norm of covariance matrix difference: 3.0113E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(16,768,2048)
+GPU Time: 2.413 msec
+GPU Performance: 168.63 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        3.7859E+05
+L2 Norm of CPU covariance matrix:        3.7859E+05
+L2 Norm of covariance matrix difference: 7.9474E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(8,256,4096)
+GPU Time: 0.461 msec
+GPU Performance: 295.84 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        1.0131E+05
+L2 Norm of CPU covariance matrix:        1.0131E+05
+L2 Norm of covariance matrix difference: 7.4280E-03
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(16,256,4096)
+GPU Time: 1.596 msec
+GPU Performance: 173.47 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        1.7883E+05
+L2 Norm of CPU covariance matrix:        1.7883E+05
+L2 Norm of covariance matrix difference: 2.0721E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(8,512,4096)
+GPU Time: 0.860 msec
+GPU Performance: 314.73 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        2.0230E+05
+L2 Norm of CPU covariance matrix:        2.0230E+05
+L2 Norm of covariance matrix difference: 2.4046E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(16,512,4096)
+GPU Time: 3.300 msec
+GPU Performance: 165.23 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        3.5707E+05
+L2 Norm of CPU covariance matrix:        3.5707E+05
+L2 Norm of covariance matrix difference: 5.8747E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(8,768,4096)
+GPU Time: 1.290 msec
+GPU Performance: 313.74 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        3.0332E+05
+L2 Norm of CPU covariance matrix:        3.0332E+05
+L2 Norm of covariance matrix difference: 4.2586E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(16,768,4096)
+GPU Time: 4.716 msec
+GPU Performance: 172.53 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        5.3541E+05
+L2 Norm of CPU covariance matrix:        5.3541E+05
+L2 Norm of covariance matrix difference: 1.1239E-01
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(8,256,8192)
+GPU Time: 0.849 msec
+GPU Performance: 321.06 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        1.4328E+05
+L2 Norm of CPU covariance matrix:        1.4328E+05
+L2 Norm of covariance matrix difference: 1.0505E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(16,256,8192)
+GPU Time: 3.117 msec
+GPU Performance: 177.61 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        2.5290E+05
+L2 Norm of CPU covariance matrix:        2.5290E+05
+L2 Norm of covariance matrix difference: 2.9304E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(8,512,8192)
+GPU Time: 1.650 msec
+GPU Performance: 327.88 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        2.8609E+05
+L2 Norm of CPU covariance matrix:        2.8609E+05
+L2 Norm of covariance matrix difference: 3.4007E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(16,512,8192)
+GPU Time: 6.391 msec
+GPU Performance: 170.65 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        5.0497E+05
+L2 Norm of CPU covariance matrix:        5.0497E+05
+L2 Norm of covariance matrix difference: 8.3080E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(8,768,8192)
+GPU Time: 2.448 msec
+GPU Performance: 330.71 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        4.2895E+05
+L2 Norm of CPU covariance matrix:        4.2895E+05
+L2 Norm of covariance matrix difference: 6.0225E-02
+ 
+
+----------------------------------------------------
+Test case: (n,m,l)=(16,768,8192)
+GPU Time: 9.257 msec
+GPU Performance: 175.79 GB/s
+Checking computed result for correctness...
+Result = PASS
+L2 Norm of CPU covariance matrix:        7.5719E+05
+L2 Norm of CPU covariance matrix:        7.5719E+05
+L2 Norm of covariance matrix difference: 1.5895E-01
+ 
