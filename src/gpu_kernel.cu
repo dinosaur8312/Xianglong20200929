@@ -113,7 +113,7 @@ void init_gpu()
 }
 
 //Calculate Covariance Matrix using GPU
-void cov_matrix_gpu(float complex *A, float complex *covA, int *nx) 
+void cov_matrix_gpu(complex<float> *A, complex<float> *covA, int *nx) 
 {
     // Initialize device pointers.
     float *d_A, *d_covA;
@@ -169,7 +169,8 @@ void cov_matrix_gpu(float complex *A, float complex *covA, int *nx)
 
 
     cudaMemcpy(covA, d_covA, numElem_covA * sizeof(float2), cudaMemcpyDefault);
-
+    cudaFree(d_covA);
+    cudaFree(d_A);
     cudaDeviceSynchronize();
 
  

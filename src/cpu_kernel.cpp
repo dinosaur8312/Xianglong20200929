@@ -6,32 +6,32 @@
 //
 #include "covmatrix.h"
 
-void cov_matrix_cpu(float complex *A, float complex *covA, int *nx)
+void cov_matrix_cpu(complex<float> *A, complex<float> *covA, int *nx)
 {
     int m=nx[0];    //sample numer
     int n=nx[1];    //feature number
     int l=nx[2];
 
     // mean calculation
-    float complex*meanA = (float complex*) malloc(n*l*sizeof(float complex));
+    complex<float>*meanA = (complex<float>*) malloc(n*l*sizeof(complex<float>));
     for(int k=0;k<l;k++)
     {
         for(int j=0;j<n;j++)
         {
             int offset = k*n+j;
-            double complex myMean = 0; //use double to avoid round-off error
+            complex<double> myMean = 0; //use double to avoid round-off error
             for(int i=0;i<m;i++)
             {
                 int id=offset*m+i;
                 myMean+=A[id];   
             }
-            meanA[offset] = myMean/m;
+            meanA[offset] = myMean/(double)m;
         }
     }
 
     //subtract all elements by mean
-    float complex*As = (float complex*) malloc(m*n*l*sizeof(float complex));
-    memcpy(As,A,m*n*l*sizeof(float complex));
+    complex<float>*As = (complex<float>*) malloc(m*n*l*sizeof(complex<float>));
+    memcpy(As,A,m*n*l*sizeof( complex<float>));
     for(int k=0;k<l;k++)
     {
         for(int j=0;j<n;j++)
@@ -52,7 +52,7 @@ void cov_matrix_cpu(float complex *A, float complex *covA, int *nx)
         {
             for(int i2=0;i2<n;i2++)
             {
-                double complex mySum=0;
+                complex<float> mySum=0;
                 for(int j=0;j<m;j++)
                 {
                     int id1=k*n*m+i1*m+j;

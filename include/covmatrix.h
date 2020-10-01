@@ -4,7 +4,7 @@
 
 #include <stdio.h>     
 #include <stdlib.h>
-#include <complex.h>
+#include <complex>
 #include <math.h>
 #include <cstring>
 using namespace std;

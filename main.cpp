@@ -12,7 +12,7 @@
 #include "gpu_kernel.cuh"
 #include "cpu_kernel.h"
 
-bool compare_results(float complex *cpu, float complex *gpu, int *nx)
+bool compare_results(complex<float> *cpu, complex<float>*gpu, int *nx)
 {
     printf("Checking computed result for correctness...\n");
     bool correct = true;
@@ -30,10 +30,10 @@ bool compare_results(float complex *cpu, float complex *gpu, int *nx)
             for(int i=0;i<nx[1];i++)
             {
                 int id = k*nx[1]*nx[1]+j*nx[1]+i;
-                float complex diff = cpu[id]-gpu[id];
-                if(cabs(cpu[id])>eps) 
+                complex<float> diff = cpu[id]-gpu[id];
+                if(abs(cpu[id])>eps) 
                 {
-                    float rel_err = cabs(diff)/cabs(cpu[id]);
+                    float rel_err = abs(diff)/abs(cpu[id]);
 
                     if(rel_err>eps)
                     {
@@ -42,9 +42,9 @@ bool compare_results(float complex *cpu, float complex *gpu, int *nx)
                     }
             
                 }
-                norm_cpu+=cabsf(cpu[id])*cabsf(cpu[id]);
-                norm_gpu+=cabsf(gpu[id])*cabsf(gpu[id]);
-                norm_diff+=cabsf(diff)*cabsf(diff);
+                norm_cpu+=norm(cpu[id]);
+                norm_gpu+=norm(gpu[id]);
+                norm_diff+=norm(diff);
             }
         }
     }
@@ -65,7 +65,7 @@ bool compare_results(float complex *cpu, float complex *gpu, int *nx)
     }
 }
 
-void init_matrix(float complex *A, int *nx)
+void init_matrix(complex<float> *A, int *nx)
 {
     
     for(int k=0;k<nx[2];k++)
@@ -75,7 +75,9 @@ void init_matrix(float complex *A, int *nx)
             for(int i=0;i<nx[0];i++)
             {
                 int id = (k*nx[0]*nx[1]+j*nx[0]+i);
-                A[id]= cos(0.1*i+0.3*j) +sin(0.2*j+0.5*i)*I;
+                float realp=cosf(0.1*i+0.3*j);
+                float imagp =sinf(0.2*j+0.5*i);
+                A[id]=(realp,imagp);
             }
         }
     }
@@ -83,9 +85,9 @@ void init_matrix(float complex *A, int *nx)
 void cov_matrix_test(int *nx)
 {
     
-    float complex *A=(float complex *)malloc(sizeof(float complex)*nx[0]*nx[1]*nx[2]);
-    float complex *covA_gpu=(float complex *)malloc(sizeof(float complex)*nx[1]*nx[1]*nx[2]);
-    float complex *covA_cpu=(float complex *)malloc(sizeof(float complex)*nx[1]*nx[1]*nx[2]);
+    complex<float> *A=(complex<float> *)malloc(sizeof(complex<float>)*nx[0]*nx[1]*nx[2]);
+    complex<float> *covA_gpu=(complex<float> *)malloc(sizeof(complex<float>)*nx[1]*nx[1]*nx[2]);
+    complex<float> *covA_cpu=(complex<float> *)malloc(sizeof(complex<float>)*nx[1]*nx[1]*nx[2]);
 
     init_matrix(A, nx);       
 
